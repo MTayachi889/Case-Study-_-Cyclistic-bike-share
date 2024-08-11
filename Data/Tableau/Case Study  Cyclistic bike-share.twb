@@ -1,0 +1,1752 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Avg_Duration+ (Data_For_Viz)' inline='true' name='federated.139tlee1jchjs912g7vv80xp4one' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Data_For_Viz' name='excel-direct.1j7vw2p0dom9db1977cyt1amiemq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/divvy-tripdata/Cyclistic_Bike_Share/Tableau/Data_For_Viz.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Avg_Duration' table='[Avg_Duration$]' type='table'>
+          <columns gridOrigin='A1:C5:no:A1:C5:0' header='yes' outcome='2'>
+            <column datatype='string' name='Membership' ordinal='0' />
+            <column datatype='integer' name='Average_Trip_Duration' ordinal='1' />
+            <column datatype='string' name='Year' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Global' table='[Global$]' type='table'>
+            <columns gridOrigin='A1:C5:no:A1:C5:0' header='yes' outcome='2'>
+              <column datatype='string' name='Membership' ordinal='0' />
+              <column datatype='integer' name='Count_Trips' ordinal='1' />
+              <column datatype='string' name='Year' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Avg_Duration' table='[Avg_Duration$]' type='table'>
+            <columns gridOrigin='A1:C5:no:A1:C5:0' header='yes' outcome='2'>
+              <column datatype='string' name='Membership' ordinal='0' />
+              <column datatype='integer' name='Average_Trip_Duration' ordinal='1' />
+              <column datatype='string' name='Year' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Count_Routes' table='[Count_Routes$]' type='table'>
+            <columns gridOrigin='A1:B3:no:A1:B3:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Count_Routes' ordinal='0' />
+              <column datatype='string' name='Year' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Frequent_Hours' table='[Frequent_Hours$]' type='table'>
+            <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+              <column datatype='string' name='Pick_Up_Hour' ordinal='0' />
+              <column datatype='string' name='Membership' ordinal='1' />
+              <column datatype='integer' name='Count_Hours' ordinal='2' />
+              <column datatype='string' name='Year' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Frequent_Routes' table='[Frequent_Routes$]' type='table'>
+            <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+              <column datatype='string' name='Route' ordinal='0' />
+              <column datatype='string' name='Membership' ordinal='1' />
+              <column datatype='integer' name='Count_Route' ordinal='2' />
+              <column datatype='string' name='Year' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Period_Of_Year' table='[Period_Of_Year$]' type='table'>
+            <columns gridOrigin='A1:D17:no:A1:D17:0' header='yes' outcome='2'>
+              <column datatype='string' name='Quarter' ordinal='0' />
+              <column datatype='string' name='Membership' ordinal='1' />
+              <column datatype='integer' name='Count_Quarter' ordinal='2' />
+              <column datatype='string' name='Year' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Rideable_Types' table='[Rideable_Types$]' type='table'>
+            <columns gridOrigin='A1:D12:no:A1:D12:0' header='yes' outcome='6'>
+              <column datatype='string' name='rideable_type' ordinal='0' />
+              <column datatype='string' name='Membership' ordinal='1' />
+              <column datatype='integer' name='Count_rideable_type' ordinal='2' />
+              <column datatype='integer' name='Year' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Week_days' table='[Week_days$]' type='table'>
+            <columns gridOrigin='A1:D9:no:A1:D9:0' header='yes' outcome='2'>
+              <column datatype='string' name='Weekend_Business' ordinal='0' />
+              <column datatype='string' name='Membership' ordinal='1' />
+              <column datatype='integer' name='Count_Weekend_Business' ordinal='2' />
+              <column datatype='string' name='Year' ordinal='3' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Average_Trip_Duration]' value='[Avg_Duration].[Average_Trip_Duration]' />
+          <map key='[Count_Hours]' value='[Frequent_Hours].[Count_Hours]' />
+          <map key='[Count_Quarter]' value='[Period_Of_Year].[Count_Quarter]' />
+          <map key='[Count_Route]' value='[Frequent_Routes].[Count_Route]' />
+          <map key='[Count_Routes]' value='[Count_Routes].[Count_Routes]' />
+          <map key='[Count_Trips]' value='[Global].[Count_Trips]' />
+          <map key='[Count_Weekend_Business]' value='[Week_days].[Count_Weekend_Business]' />
+          <map key='[Count_rideable_type]' value='[Rideable_Types].[Count_rideable_type]' />
+          <map key='[Membership (Avg!Duration)]' value='[Avg_Duration].[Membership]' />
+          <map key='[Membership (Frequent!Hours)]' value='[Frequent_Hours].[Membership]' />
+          <map key='[Membership (Frequent!Routes)]' value='[Frequent_Routes].[Membership]' />
+          <map key='[Membership (Period!Of!Year)]' value='[Period_Of_Year].[Membership]' />
+          <map key='[Membership (Rideable!Types)]' value='[Rideable_Types].[Membership]' />
+          <map key='[Membership (Week!days)]' value='[Week_days].[Membership]' />
+          <map key='[Membership]' value='[Global].[Membership]' />
+          <map key='[Pick_Up_Hour]' value='[Frequent_Hours].[Pick_Up_Hour]' />
+          <map key='[Quarter]' value='[Period_Of_Year].[Quarter]' />
+          <map key='[Route]' value='[Frequent_Routes].[Route]' />
+          <map key='[Weekend_Business]' value='[Week_days].[Weekend_Business]' />
+          <map key='[Year (Avg!Duration)]' value='[Avg_Duration].[Year]' />
+          <map key='[Year (Count!Routes)]' value='[Count_Routes].[Year]' />
+          <map key='[Year (Frequent!Hours)]' value='[Frequent_Hours].[Year]' />
+          <map key='[Year (Frequent!Routes)]' value='[Frequent_Routes].[Year]' />
+          <map key='[Year (Period!Of!Year)]' value='[Period_Of_Year].[Year]' />
+          <map key='[Year (Rideable!Types)]' value='[Rideable_Types].[Year]' />
+          <map key='[Year (Week!days)]' value='[Week_days].[Year]' />
+          <map key='[Year]' value='[Global].[Year]' />
+          <map key='[rideable_type]' value='[Rideable_Types].[rideable_type]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Global]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C5:no:A1:C5:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Avg_Duration]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C5:no:A1:C5:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Count_Routes]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B3:no:A1:B3:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Frequent_Hours]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>5</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D21:no:A1:D21:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Frequent_Routes]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D21:no:A1:D21:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Period_Of_Year]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D17:no:A1:D17:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Rideable_Types]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D12:no:A1:D12:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Week_days]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D9:no:A1:D9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership]</local-name>
+            <parent-name>[Global]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Trips</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Trips]</local-name>
+            <parent-name>[Global]</parent-name>
+            <remote-alias>Count_Trips</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Global]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership (Avg!Duration)]</local-name>
+            <parent-name>[Avg_Duration]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average_Trip_Duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Average_Trip_Duration]</local-name>
+            <parent-name>[Avg_Duration]</parent-name>
+            <remote-alias>Average_Trip_Duration</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year (Avg!Duration)]</local-name>
+            <parent-name>[Avg_Duration]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Routes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Routes]</local-name>
+            <parent-name>[Count_Routes]</parent-name>
+            <remote-alias>Count_Routes</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year (Count!Routes)]</local-name>
+            <parent-name>[Count_Routes]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pick_Up_Hour</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Pick_Up_Hour]</local-name>
+            <parent-name>[Frequent_Hours]</parent-name>
+            <remote-alias>Pick_Up_Hour</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership (Frequent!Hours)]</local-name>
+            <parent-name>[Frequent_Hours]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Hours</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Hours]</local-name>
+            <parent-name>[Frequent_Hours]</parent-name>
+            <remote-alias>Count_Hours</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year (Frequent!Hours)]</local-name>
+            <parent-name>[Frequent_Hours]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Route</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Route]</local-name>
+            <parent-name>[Frequent_Routes]</parent-name>
+            <remote-alias>Route</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership (Frequent!Routes)]</local-name>
+            <parent-name>[Frequent_Routes]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Route</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Route]</local-name>
+            <parent-name>[Frequent_Routes]</parent-name>
+            <remote-alias>Count_Route</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year (Frequent!Routes)]</local-name>
+            <parent-name>[Frequent_Routes]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quarter</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Quarter]</local-name>
+            <parent-name>[Period_Of_Year]</parent-name>
+            <remote-alias>Quarter</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership (Period!Of!Year)]</local-name>
+            <parent-name>[Period_Of_Year]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Quarter]</local-name>
+            <parent-name>[Period_Of_Year]</parent-name>
+            <remote-alias>Count_Quarter</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year (Period!Of!Year)]</local-name>
+            <parent-name>[Period_Of_Year]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rideable_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[rideable_type]</local-name>
+            <parent-name>[Rideable_Types]</parent-name>
+            <remote-alias>rideable_type</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership (Rideable!Types)]</local-name>
+            <parent-name>[Rideable_Types]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_rideable_type</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_rideable_type]</local-name>
+            <parent-name>[Rideable_Types]</parent-name>
+            <remote-alias>Count_rideable_type</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (Rideable!Types)]</local-name>
+            <parent-name>[Rideable_Types]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weekend_Business</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Weekend_Business]</local-name>
+            <parent-name>[Week_days]</parent-name>
+            <remote-alias>Weekend_Business</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Membership</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Membership (Week!days)]</local-name>
+            <parent-name>[Week_days]</parent-name>
+            <remote-alias>Membership</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Weekend_Business</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Weekend_Business]</local-name>
+            <parent-name>[Week_days]</parent-name>
+            <remote-alias>Count_Weekend_Business</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year (Week!days)]</local-name>
+            <parent-name>[Week_days]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Average Trip Duration' datatype='integer' name='[Average_Trip_Duration]' role='measure' type='quantitative' />
+      <column caption='%_Of_Total_Rides' datatype='real' default-format='p0.00%' name='[Calcul 1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Count_Weekend_Business]) / TOTAL(SUM([Count_Weekend_Business]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Count Hours' datatype='integer' name='[Count_Hours]' role='measure' type='quantitative' />
+      <column caption='Count Quarter' datatype='integer' name='[Count_Quarter]' role='dimension' type='quantitative' />
+      <column caption='Count Route' datatype='integer' name='[Count_Route]' role='measure' type='quantitative' />
+      <column caption='Count Routes' datatype='integer' name='[Count_Routes]' role='measure' type='quantitative' />
+      <column caption='Count Trips' datatype='integer' name='[Count_Trips]' role='measure' type='quantitative' />
+      <column caption='Count Weekend Business' datatype='integer' name='[Count_Weekend_Business]' role='measure' type='quantitative' />
+      <column caption='Count rideable type' datatype='integer' name='[Count_rideable_type]' role='measure' type='quantitative' />
+      <column caption='Membership (Week!days)1' datatype='string' name='[Membership (Week!days)]' role='dimension' type='nominal' />
+      <column caption='Pick Up Hour' datatype='string' default-role='measure' default-type='quantitative' name='[Pick_Up_Hour]' role='dimension' type='nominal' />
+      <column caption='Weekend Business' datatype='string' name='[Weekend_Business]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year (Rideable!Types)]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Avg_Duration' datatype='table' name='[__tableau_internal_object_id__].[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Count_Routes' datatype='table' name='[__tableau_internal_object_id__].[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Frequent_Hours' datatype='table' name='[__tableau_internal_object_id__].[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Frequent_Routes' datatype='table' name='[__tableau_internal_object_id__].[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Global' datatype='table' name='[__tableau_internal_object_id__].[Global_27144DD4D36541D195C6C6B26C6AEBB2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Period_Of_Year' datatype='table' name='[__tableau_internal_object_id__].[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Rideable_Types' datatype='table' name='[__tableau_internal_object_id__].[Rideable!Types_3767CEAB215749358BF676E771D731FF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Week_days' datatype='table' name='[__tableau_internal_object_id__].[Week!days_CEDCB9C5561142E0865ADB28A39692FB]' role='measure' type='quantitative' />
+      <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='fr_FR' class='hyper' dbname='C:/Users/PLANET~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0fnp5ij1dhfr1819yahvv1qdig8t.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/09/2024 04:30:07 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6' table='[Extract].[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='Global_27144DD4D36541D195C6C6B26C6AEBB2' table='[Extract].[Global_27144DD4D36541D195C6C6B26C6AEBB2]' type='table' />
+            <relation name='Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6' table='[Extract].[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]' type='table' />
+            <relation name='Count!Routes_3965835FB88E452E9CC22B5C8282D3E1' table='[Extract].[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]' type='table' />
+            <relation name='Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22' table='[Extract].[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]' type='table' />
+            <relation name='Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060' table='[Extract].[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]' type='table' />
+            <relation name='Period!Of!Year_B6622CCCB8B54F10BA701F8658221523' table='[Extract].[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]' type='table' />
+            <relation name='Rideable!Types_3767CEAB215749358BF676E771D731FF' table='[Extract].[Rideable!Types_3767CEAB215749358BF676E771D731FF]' type='table' />
+            <relation name='Week!days_CEDCB9C5561142E0865ADB28A39692FB' table='[Extract].[Week!days_CEDCB9C5561142E0865ADB28A39692FB]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[Average_Trip_Duration]' value='[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6].[Average_Trip_Duration]' />
+            <map key='[Count_Hours]' value='[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22].[Count_Hours]' />
+            <map key='[Count_Quarter]' value='[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523].[Count_Quarter]' />
+            <map key='[Count_Route]' value='[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060].[Count_Route]' />
+            <map key='[Count_Routes]' value='[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1].[Count_Routes]' />
+            <map key='[Count_Trips]' value='[Global_27144DD4D36541D195C6C6B26C6AEBB2].[Count_Trips]' />
+            <map key='[Count_Weekend_Business]' value='[Week!days_CEDCB9C5561142E0865ADB28A39692FB].[Count_Weekend_Business]' />
+            <map key='[Count_rideable_type]' value='[Rideable!Types_3767CEAB215749358BF676E771D731FF].[Count_rideable_type]' />
+            <map key='[Membership (Avg!Duration)]' value='[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6].[Membership]' />
+            <map key='[Membership (Frequent!Hours)]' value='[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22].[Membership]' />
+            <map key='[Membership (Frequent!Routes)]' value='[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060].[Membership]' />
+            <map key='[Membership (Period!Of!Year)]' value='[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523].[Membership]' />
+            <map key='[Membership (Rideable!Types)]' value='[Rideable!Types_3767CEAB215749358BF676E771D731FF].[Membership]' />
+            <map key='[Membership (Week!days)]' value='[Week!days_CEDCB9C5561142E0865ADB28A39692FB].[Membership]' />
+            <map key='[Membership]' value='[Global_27144DD4D36541D195C6C6B26C6AEBB2].[Membership]' />
+            <map key='[Pick_Up_Hour]' value='[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22].[Pick_Up_Hour]' />
+            <map key='[Quarter]' value='[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523].[Quarter]' />
+            <map key='[Route]' value='[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060].[Route]' />
+            <map key='[Weekend_Business]' value='[Week!days_CEDCB9C5561142E0865ADB28A39692FB].[Weekend_Business]' />
+            <map key='[Year (Avg!Duration)]' value='[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6].[Year]' />
+            <map key='[Year (Count!Routes)]' value='[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1].[Year]' />
+            <map key='[Year (Frequent!Hours)]' value='[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22].[Year]' />
+            <map key='[Year (Frequent!Routes)]' value='[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060].[Year]' />
+            <map key='[Year (Period!Of!Year)]' value='[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523].[Year]' />
+            <map key='[Year (Rideable!Types)]' value='[Rideable!Types_3767CEAB215749358BF676E771D731FF].[Year]' />
+            <map key='[Year (Week!days)]' value='[Week!days_CEDCB9C5561142E0865ADB28A39692FB].[Year]' />
+            <map key='[Year]' value='[Global_27144DD4D36541D195C6C6B26C6AEBB2].[Year]' />
+            <map key='[rideable_type]' value='[Rideable!Types_3767CEAB215749358BF676E771D731FF].[rideable_type]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership]</local-name>
+              <parent-name>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Global</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Trips</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Trips]</local-name>
+              <parent-name>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</parent-name>
+              <remote-alias>Count_Trips</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Global</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Global</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Global_27144DD4D36541D195C6C6B26C6AEBB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership (Avg!Duration)]</local-name>
+              <parent-name>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Avg_Duration</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average_Trip_Duration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Average_Trip_Duration]</local-name>
+              <parent-name>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</parent-name>
+              <remote-alias>Average_Trip_Duration</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Avg_Duration</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year (Avg!Duration)]</local-name>
+              <parent-name>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Avg_Duration</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Routes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Routes]</local-name>
+              <parent-name>[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]</parent-name>
+              <remote-alias>Count_Routes</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Count_Routes</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year (Count!Routes)]</local-name>
+              <parent-name>[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Count_Routes</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pick_Up_Hour</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pick_Up_Hour]</local-name>
+              <parent-name>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</parent-name>
+              <remote-alias>Pick_Up_Hour</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Frequent_Hours</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership (Frequent!Hours)]</local-name>
+              <parent-name>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Frequent_Hours</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Hours</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Hours]</local-name>
+              <parent-name>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</parent-name>
+              <remote-alias>Count_Hours</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Frequent_Hours</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year (Frequent!Hours)]</local-name>
+              <parent-name>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Frequent_Hours</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Route</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Route]</local-name>
+              <parent-name>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</parent-name>
+              <remote-alias>Route</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Frequent_Routes</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership (Frequent!Routes)]</local-name>
+              <parent-name>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Frequent_Routes</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Route</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Route]</local-name>
+              <parent-name>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</parent-name>
+              <remote-alias>Count_Route</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Frequent_Routes</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year (Frequent!Routes)]</local-name>
+              <parent-name>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Frequent_Routes</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quarter</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Quarter]</local-name>
+              <parent-name>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</parent-name>
+              <remote-alias>Quarter</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Period_Of_Year</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership (Period!Of!Year)]</local-name>
+              <parent-name>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Period_Of_Year</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Quarter</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Quarter]</local-name>
+              <parent-name>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</parent-name>
+              <remote-alias>Count_Quarter</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Period_Of_Year</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year (Period!Of!Year)]</local-name>
+              <parent-name>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Period_Of_Year</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rideable_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rideable_type]</local-name>
+              <parent-name>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</parent-name>
+              <remote-alias>rideable_type</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Rideable_Types</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership (Rideable!Types)]</local-name>
+              <parent-name>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Rideable_Types</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_rideable_type</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_rideable_type]</local-name>
+              <parent-name>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</parent-name>
+              <remote-alias>Count_rideable_type</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Rideable_Types</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year (Rideable!Types)]</local-name>
+              <parent-name>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Rideable_Types</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Rideable!Types_3767CEAB215749358BF676E771D731FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Weekend_Business</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Weekend_Business]</local-name>
+              <parent-name>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</parent-name>
+              <remote-alias>Weekend_Business</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Week_days</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Membership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Membership (Week!days)]</local-name>
+              <parent-name>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</parent-name>
+              <remote-alias>Membership</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Week_days</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Weekend_Business</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Weekend_Business]</local-name>
+              <parent-name>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</parent-name>
+              <remote-alias>Count_Weekend_Business</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Week_days</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year (Week!days)]</local-name>
+              <parent-name>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Week_days</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LFR_RFR_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Week!days_CEDCB9C5561142E0865ADB28A39692FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;FR&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Weekend_Business' />
+        <field-sort-custom-order field='Membership (Week!days)' />
+        <field-sort-custom-order field='Count_Weekend_Business' />
+        <field-sort-custom-order field='Calculation_638385296081563652' />
+        <field-sort-custom-order field='Year (Week!days)' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Avg_Duration' id='Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Avg_Duration' table='[Avg_Duration$]' type='table'>
+                <columns gridOrigin='A1:C5:no:A1:C5:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Membership' ordinal='0' />
+                  <column datatype='integer' name='Average_Trip_Duration' ordinal='1' />
+                  <column datatype='string' name='Year' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6' table='[Extract].[Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6]' type='table' />
+            </properties>
+          </object>
+          <object caption='Count_Routes' id='Count!Routes_3965835FB88E452E9CC22B5C8282D3E1'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Count_Routes' table='[Count_Routes$]' type='table'>
+                <columns gridOrigin='A1:B3:no:A1:B3:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Count_Routes' ordinal='0' />
+                  <column datatype='string' name='Year' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Count!Routes_3965835FB88E452E9CC22B5C8282D3E1' table='[Extract].[Count!Routes_3965835FB88E452E9CC22B5C8282D3E1]' type='table' />
+            </properties>
+          </object>
+          <object caption='Frequent_Hours' id='Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Frequent_Hours' table='[Frequent_Hours$]' type='table'>
+                <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Pick_Up_Hour' ordinal='0' />
+                  <column datatype='string' name='Membership' ordinal='1' />
+                  <column datatype='integer' name='Count_Hours' ordinal='2' />
+                  <column datatype='string' name='Year' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22' table='[Extract].[Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22]' type='table' />
+            </properties>
+          </object>
+          <object caption='Frequent_Routes' id='Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Frequent_Routes' table='[Frequent_Routes$]' type='table'>
+                <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Route' ordinal='0' />
+                  <column datatype='string' name='Membership' ordinal='1' />
+                  <column datatype='integer' name='Count_Route' ordinal='2' />
+                  <column datatype='string' name='Year' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060' table='[Extract].[Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060]' type='table' />
+            </properties>
+          </object>
+          <object caption='Global' id='Global_27144DD4D36541D195C6C6B26C6AEBB2'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Global' table='[Global$]' type='table'>
+                <columns gridOrigin='A1:C5:no:A1:C5:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Membership' ordinal='0' />
+                  <column datatype='integer' name='Count_Trips' ordinal='1' />
+                  <column datatype='string' name='Year' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Global_27144DD4D36541D195C6C6B26C6AEBB2' table='[Extract].[Global_27144DD4D36541D195C6C6B26C6AEBB2]' type='table' />
+            </properties>
+          </object>
+          <object caption='Period_Of_Year' id='Period!Of!Year_B6622CCCB8B54F10BA701F8658221523'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Period_Of_Year' table='[Period_Of_Year$]' type='table'>
+                <columns gridOrigin='A1:D17:no:A1:D17:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Quarter' ordinal='0' />
+                  <column datatype='string' name='Membership' ordinal='1' />
+                  <column datatype='integer' name='Count_Quarter' ordinal='2' />
+                  <column datatype='string' name='Year' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Period!Of!Year_B6622CCCB8B54F10BA701F8658221523' table='[Extract].[Period!Of!Year_B6622CCCB8B54F10BA701F8658221523]' type='table' />
+            </properties>
+          </object>
+          <object caption='Rideable_Types' id='Rideable!Types_3767CEAB215749358BF676E771D731FF'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Rideable_Types' table='[Rideable_Types$]' type='table'>
+                <columns gridOrigin='A1:D12:no:A1:D12:0' header='yes' outcome='6'>
+                  <column datatype='string' name='rideable_type' ordinal='0' />
+                  <column datatype='string' name='Membership' ordinal='1' />
+                  <column datatype='integer' name='Count_rideable_type' ordinal='2' />
+                  <column datatype='integer' name='Year' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Rideable!Types_3767CEAB215749358BF676E771D731FF' table='[Extract].[Rideable!Types_3767CEAB215749358BF676E771D731FF]' type='table' />
+            </properties>
+          </object>
+          <object caption='Week_days' id='Week!days_CEDCB9C5561142E0865ADB28A39692FB'>
+            <properties context=''>
+              <relation connection='excel-direct.1j7vw2p0dom9db1977cyt1amiemq' name='Week_days' table='[Week_days$]' type='table'>
+                <columns gridOrigin='A1:D9:no:A1:D9:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Weekend_Business' ordinal='0' />
+                  <column datatype='string' name='Membership' ordinal='1' />
+                  <column datatype='integer' name='Count_Weekend_Business' ordinal='2' />
+                  <column datatype='string' name='Year' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Week!days_CEDCB9C5561142E0865ADB28A39692FB' table='[Extract].[Week!days_CEDCB9C5561142E0865ADB28A39692FB]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Membership]' />
+              <expression op='[Membership (Avg!Duration)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Avg!Duration_C8972EF27AEE4969B10559CACF5C3DA6' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Year]' />
+              <expression op='[Year (Count!Routes)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Count!Routes_3965835FB88E452E9CC22B5C8282D3E1' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Membership]' />
+              <expression op='[Membership (Frequent!Hours)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Frequent!Hours_C2679E431C1640AFA6192ABC741EDC22' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Membership]' />
+              <expression op='[Membership (Frequent!Routes)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Frequent!Routes_48DB2D7C4C6347D1A43EC18038C43060' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Membership]' />
+              <expression op='[Membership (Period!Of!Year)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Period!Of!Year_B6622CCCB8B54F10BA701F8658221523' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Membership]' />
+              <expression op='[Membership (Rideable!Types)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Rideable!Types_3767CEAB215749358BF676E771D731FF' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Membership]' />
+              <expression op='[Membership (Week!days)]' />
+            </expression>
+            <first-end-point object-id='Global_27144DD4D36541D195C6C6B26C6AEBB2' />
+            <second-end-point object-id='Week!days_CEDCB9C5561142E0865ADB28A39692FB' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Feuille 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Avg_Duration+ (Data_For_Viz)' name='federated.139tlee1jchjs912g7vv80xp4one' />
+          </datasources>
+          <datasource-dependencies datasource='federated.139tlee1jchjs912g7vv80xp4one'>
+            <column datatype='string' name='[Membership]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Membership]' derivation='None' name='[none:Membership:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]'>
+            <groupfilter function='member' level='[none:Membership:nk]' member='&quot;member&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]'>
+            <groupfilter function='member' level='[none:Year:nk]' member='&quot;2021&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]</column>
+            <column>[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A6480092-48B7-4E7E-9F28-874C0530DC57}' />
+    </worksheet>
+    <worksheet name='Weekend_Business_Day_Member'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Avg_Duration+ (Data_For_Viz)' name='federated.139tlee1jchjs912g7vv80xp4one' />
+          </datasources>
+          <datasource-dependencies datasource='federated.139tlee1jchjs912g7vv80xp4one'>
+            <column caption='%_Of_Total_Rides' datatype='real' default-format='p0.00%' name='[Calcul 1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Count_Weekend_Business]) / TOTAL(SUM([Count_Weekend_Business]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Count Weekend Business' datatype='integer' name='[Count_Weekend_Business]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Membership]' role='dimension' type='nominal' />
+            <column caption='Weekend Business' datatype='string' name='[Weekend_Business]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Membership]' derivation='None' name='[none:Membership:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Weekend_Business]' derivation='None' name='[none:Weekend_Business:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calcul 1]' derivation='User' name='[usr:Calcul 1:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]'>
+            <groupfilter function='member' level='[none:Membership:nk]' member='&quot;member&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]'>
+            <groupfilter function='member' level='[none:Year:nk]' member='&quot;2021&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]</column>
+            <column>[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.139tlee1jchjs912g7vv80xp4one].[usr:Calcul 1:qk]' scope='rows' value='%_Of_Total_Rides' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.139tlee1jchjs912g7vv80xp4one].[usr:Calcul 1:qk]</rows>
+        <cols>[federated.139tlee1jchjs912g7vv80xp4one].[none:Weekend_Business:nk]</cols>
+      </table>
+      <simple-id uuid='{2DF8B834-3F40-4A04-B9EA-83D24CBF7F99}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Tableau de bord 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98134' id='3' param='vert' type-v2='layout-flow' w='97538' x='1231' y='933' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{15C1EFB5-0DA2-473D-A2F8-D1316ACF8D6D}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Weekend_Business_Day_Member'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card param='[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]' type='filter' />
+            <card param='[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership (Week!days):nk]</field>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]</field>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Weekend_Business:nk]</field>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{23748065-7F0B-4331-898A-E4824B6917E2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Feuille 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card param='[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]' type='filter' />
+            <card param='[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership (Frequent!Hours):nk]</field>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Membership:nk]</field>
+            <field>[federated.139tlee1jchjs912g7vv80xp4one].[none:Year:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{71E7E5DC-FEF4-494B-8427-90AF26C810C4}' />
+    </window>
+    <window class='dashboard' name='Tableau de bord 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{FE766401-B006-46EE-8215-3A3D07F9BADD}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Feuille 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAE8klEQVR4nO3Zy27bVhhF4X0OqatF+SbbclB02EHR93+ZjpKgsR0ncUzaupAU2YFToUZQ
+      u4gcCcZe30gQpYMfApd0SIW2bVsBpuKuBwB2aeMAiqJ4iTmAndg4AHZQeM3YAsEaAcAaAWDr
+      qvlMb9+/1W0x0/y+ULV6fhvdVDPl9+Wj5+7u7p5933K5/LZArWVZf3c8bHobNM9zjcfjTZaA
+      mbIoVPZ6Kj5d6fKvCx2eTCXVimlPbV2paVfqDUe6ev9Oh2dTJaGrNyd9vb/IdX19rT9+/00f
+      P98oqtFKiUJ1pzIZqtuUqpqg8TDV12XQ5GiippqpXs7VH/ZUh0yTg8GjWdLdfARwFtKoz1eX
+      Gmf7mpw26nZSzStp0Otq0bbK9kZalLUmJ6caZiONBmOFuNRw0Nf0/FxpJ1USo/ZG++okQUXe
+      qpt2NRoeSgrS8qu+zB/WrdtUajpSiEqT7zc8/AJg51Z1rZAkiiG8zIJNrbpNlCbPr8cvAHYu
+      SV/4NIzp/z6xuQiGtXUoRVH80J9as9nsRQcCtmkdQJZlP7wI1wB4rdgCwRoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwFr6z4Pl7FYfrm51cHysjmr19zKFIMUQ1Lbtw4tCkNpW4dtz
+      MdIPXrd1AK2k0+m5ik/v9OfljaZnp6pX7UMA9UpKKiXJQNfXVzo9nqgdjPXr2dEORwc2tw4g
+      SVJ9vLrU8eRc521XvW7UfSkdjofK7xfKBpnqNuosninbyzTYP9jl3MCLCO16f/NY2zRSiArh
+      6QXyPNd4PP4ZswE/3XoTv1gsHh0IMaqqyq0PBGzTeguU395qdnerNhlo1Iv6UsxVznMNsyM1
+      5Uz9wVA3eaEkRmXDofL7md788ssuZwc2tg6g0+noy/WF4t6x+mlfMUYdHJ1IbaMPF5813l/p
+      8OBYIWl0f/NVaRJU1bscHdjcf14DPKUqSyXdrqK4BsDr9uSN/Lp++IpvVrWaf2XS+XbyA69d
+      +tTBIs9VLudKlCqbnqm3ramALXkygKpcaLGs1IutmmduhwKv0ZMBnE7fbGsOYCfYysMaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcDa3ye7Es7rMwtTAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Tableau de bord 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACF0lEQVR4nO3TMQEAIAzAMIZ/z0MGRxMFfTq7uweCZmbu7wj4yQCkGYA0A5BmANIMQJoB
+      SDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0
+      A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMA
+      aQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5Bm
+      ANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYg
+      zQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIM
+      QJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCk
+      GYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoB
+      SDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0
+      A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSHtb
+      egWA0FAUAAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Weekend_Business_Day_Member' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAdIklEQVR4nO3daXCb953Y8e9z4AYBggd435dESxR1H5Zk+YwtxdfGduLdTdNkNs1sO+km
+      s9nZ7e5MX3S66XTT7jZpMmmz2a5zH46TOLbjQ4dl65YoiZREUSRFiTcJXiBIEMeD5+gLSrJl
+      yc66tUJBz/8zoxeGQOgP4Pk+zwPIen6SZVkWgmBDkiRJ8lIvQhCWkghAsDURgGBrIgDB1kQA
+      gq2JAARbEwEItiYCEGxNBCDYmghAsDURgGBr6lIvwH4s0vNTDI2M4ww3UpnnglSEc+29JMMr
+      WVcTAD3F1OgA42YhTTX5OD/Mw6fGaG+bpXxLEwXyR7V/01mIjjE8qBFeXkfICaQn6TrTy/hc
+      EhOQVQ95JdXU1ZXiVz6iP/b3QBwBlkB6so+9L/2c3Wcj6IA+fJiffO/b/LdfdmICRnySk6//
+      iBeODqN/2AePnuaf//YXXDDMj3DFGhN9B3nxude4uHDlprkuXvjmc7zw5kFOtLVx5OBufvHj
+      n3KgL/b/8PjTnH39ZU4Mpj/CNf/LiCPA752ELxiiwOPn8liEOJWk+wfJ3biO4LEBptiENxVj
+      cmaOshXleJd6uR+ohof+5PPsrMonM9XDL77zDxzpjPBIY/BDPo5BOh4nlfn9/4/JIoAloOQE
+      KQp5uTwRYSaZYPqyScXqVfgOn+CyZlCXGCc6GaK5MhfMBQZPHWDPgQ5GkxKFq3bx6Uea8ZhJ
+      xs4f5JU9J5lIu6lefx8PbF5B0dU/xLJITPdweO8JHK0f5+7yJGcO7uPt05dJEKJl19M80pxH
+      YvoMb/6sg0y5g5HuIdLBJu7fuYOVlSGMsVO89Ou9dEeTaIk5EtS8zzPSWZgZYSbupaw4BNE+
+      9nROUFR1FysrAtC/j/9xvowvPVxLdLidN36zj4sxE0/JCh54cBvNFRpzUyZuD2QSs7Tv+T5d
+      ejXSyAWGU35W3vMw21trCVgjvPnzFzgyMI8zv5ZND+1kS52P2MU29r55iJ5ICjXYwEPPPsbK
+      gM7FQ7/kt0cHSEh+atfey713t1L8nj2KOAVaCo4AhcV+FH2MmZlR+qP5lAYbWNEwSPeATmpm
+      gphcR0WRxEz3Yd4+N0KgcQP33N1E6q3/zQtn4sTGz7H/1fPktNzNttUlTB49wKFzg8Sv7EQz
+      iQH2/OA52jMVVOZp9B49wpkBk4YN27l7mcTB775Ax0KG5Hw/bftPMemqYs36OuTLpznePsBc
+      vIcXv/kDOtVl3L1tCy31BXhueCLdPP9f/iN//uWv8J//cQ/qmqfYtTIPFiJ0dl9kaCa5eLep
+      Tl7rGENPztF16BW65Ea2btvMysp8HLKByQxdew/TG9Ux0gn62vZydlylZvU6qh0jHDtxkrHZ
+      Gdp/8VM6lDq2bt9CQ26U479+mfMjwxw71M4o5azbvpV1dUGMjERy5hS7X7hM3vptbN2wnNJc
+      J9ZNzifFEWApSG7yCgoxpB4me7oYCOSx0hMk3JzLy50RNjhGma7eQpkjTl9XB2+/uI8pZwiv
+      Qyc6PEjtmgjbiw7yq9dew2hvw0uS6QmFu5dtYlsxwAm+8cULlK56lr98dDMV0gC/OXOAF9/o
+      wxnKwaHHGB7KpXX6X1GOhMtXQMOqjWwpGiV2qpfL8SR6XxcvTVTwxS8/wPp8i37XBJc6ou95
+      IuVs++QuthQHSE1f4tSRPbx+qorP1r7P08bCmp+m83QHFSU7WL+mjorCICoj191PdnopqlvF
+      xi3FlCQ66b4QJ7XQy+E3DvFG7DhtfhUtMYuUt5Llc1sw50bp7hrEFQqzac1q6vIdEJOIRc7Q
+      e7qCorvXs6K2mgLfjWsSASwJmVBBmBxHP8PnOzHDd+P2esitrWH0+S5GiwYorH0WHwaaBrVb
+      P8XnHvsYtUEJAIfbw+xRmXDLJ/nsXz1KpbL4mG5/AF9sD9DCH325hdPf3M2xkfuoLNHRrGK2
+      PL2Txx9pIVcGUPDnOYgPSsiyitPpQFZkZElGAkglWVAD5PlVZCmDJEs3eR4+imsbWFaVj7xQ
+      gH7pND853ctM7c2/t5I9IdY89Rf8dd1JDh97ma+//Br3fOZzPLntvXeUUJ1OHLKCLMtIMmCm
+      SSTLeeKvvsQTtf7Fu6kufDk+rOI/oazjJCePvsbXnv8em//s7/nTjev4/H/9D7QdP8qRH32d
+      l0u28JnPPMv6iuuPY+IUaIko+YVUINN3sg9nyIPXoyI33EVt+z729xs0N5YhEaS8ppT5sbOc
+      7RtFlyTM+RF6xpL4a+opjh3nUNsEuiSRjo4yMjVHWgdwUbR8J597ppoD/+fHnDZzqSyVmehs
+      p3ckgSRZzI/2Mhj7gG+KqupZPX2SPadGmJiMMNo/xuwNd8qQmIsxG40yPnqJ0z0jBAuDeGUF
+      dX6G8UiEkcEu9h7qJKMbZNIpLnf34KzbzNP/+g95oN7P3OgMCe1f8IK5G1i9Zpa9vzrEDCqy
+      lSAaGSAyNEH/0BRS5UYe+9y/45mVGj39EdKT5zk35qP1vk/x6WcfIuyIEpmZv+FhxRFgiUju
+      fCprVWgLUxTIw+uWQGqgpXGc/caDNJRLgETJ6o/xzEySn7/0db7yXAZXUT1P/ulfsq5yG0/9
+      8Rg/+MXf8ZWfWOSUtPLYZz5FVXEOJdVhfKqHyi2f5MmJH/LW3lH+6P7HeSDxM176n3/DDzMO
+      Cuvv5wtfWY3qDBAuL8SnADjIKSgkP+hFDa3g83/Ww9f+6a/5cyWXyoZ6ikry8V79jl/1ES6f
+      4uWv/g2/BmRHiMZtT/K5J1rwqlOsLz/Kj3/83zlUsJKnNjRT6w0gSzrJ8TZ++J3vMaZJFCy7
+      jz9e30S+a5K8ylK8LhlJUQmGK9Gu/GWC059PUb4bjyPEji/8BaPf/ke++u9fwXDns3z7Lp59
+      uJD5M0d4/rdHGZ0Db+VW/s391SCd4/Kr3+J735rGcIdZ+8gztNYV3Pg+iH8UL9iV+Efxgu2J
+      AARbEwEItiYCuEV0XccwjKVehvA7iABuEdM0Ed8v3P5EAIKtiQAEWxMBCLYmAhBsTQQg2JoI
+      QLA1EYBgayIAwdZEAIKtiQAEWxMBCLYmAhBsTQQg2JoIQLA1EYBgayIAwdZEAIKtiQAEWxMB
+      CLYmAhBsTQQg2Fp2XBvUSBNPpMjo77qYqyTj9Obgc1ikkwmSaZ2r12BweAL4XArSuy9obJlk
+      0kmSKQ0DBbfPh1tdvBKyYWgkFxJkLBmHy4PH5UCRJQxtgXhCw5KdeH0+nApYRgbNsJAVBw7l
+      ZldMFrJJdgQw3cue19/i/NDi/CnLMtDSsPLpL/FUXYzTe19jb9s4kmvxgFb/0Bd4cnU+jmvD
+      2iwy8XHOHtnP4TP9xAlQv3kXj2yswkOasc4D7N5/kkjKRdGyTezYtpaqkMXgsZd46Wg/GV8Z
+      m3c9zeZKB8mJXs6NaIRrV1Cdlx0vn/D+svLiuHpimIOvtFO+6+PUpi7S1j2CXL6JdRWum/+A
+      lWKo4zhnx2WaN62nSO/llRfOUf/MkzRJwxx45RjB7Y/RGopx6q1TJIubWb9cY/evJtn0+EY8
+      M8fY3Z7Hox8rY6S3n5SrlKaGIhwfsEZN05BlGVUVkdyusvTiuCazF08wXbaBWi9oaR0Z8Pne
+      Z+MH0OeY1mTyiuooz3XhKWhmW1OCvjEdbWGYWW8rqyr8uPylNNcGsIwE8XkN/Dm4ZRnFFcBL
+      gtnoDCnTQ7gi/IEbv5A9sm/3lBmn/Tys3BlGBjQtw1T/eS6Mx7nsdpFTUs+q5eXkuFSunaFn
+      dCRVxZnju/KEZQrDAaZmFsCdQinMxw2ARCDgIRO1SKsl1DiOcmDfMJKuoZasJh2bw1RdDJ/Y
+      TYcVZtnKJkpzPchY6Pr1A6hM08Q0TXF5xNtc1gUQ6z7OZMkG7g0s/rcrVERNYzPueQvLzBDr
+      Pcph5T4eaC5Evfoh9WoJ153sWSweAKX33A6SJCHJedy1cQXGhWE0Zz6lRRqxKQeWOcZwzMJt
+      XKSzP0SwuZKcD5hkLUnig/LtLLsCyIxx8rxC64Nhrn6+dQXCNK0N0wSYhkb80pv8pDOCsSwf
+      VblyL1XFyuik5+NkCODAJDIeo6DEA243xsQkSYrwYBGLJVAVD06ngtNXy7q7a9CS0/Sc7iNU
+      UcDMqEzJqh2sUtvZ3ZcioxlILhWH4/qTIsuyxGeALJBV787CxQ5mK1rZHLi67CSRwUsMj3uo
+      W1VFjpJmYnAUxd8I7/54owYpdJu0j/YyFM2jJHOB/RcCrFir4rQqyUsd4FR/FevyZzl3cQ65
+      vJIc9+Ke2zIt4hdPMpm3iaZgjKkhAy2VImXOoxOEmw6P+2Dn+yf53mvtH8Ercut84bF11JaG
+      lnoZt1z2BGCO09YBDffl4rq2bTsJ5PjQTr/Jd1+7TDTjpGjZJnY+XIxDNpg68yovD9fzyZ3L
+      KG5YRtnEG/z6m7uZlUpYv+sJGvxOXBSzorWUV57/Gq8t+Klbdy8PNlRcm4VlJXs5dDGXrR8P
+      4FDclORe5o2Xvs4+s5odj6/C7/nw3yPEkxoXBqc/spfmVkimM0u9hN+L7Pka1DIxDAtJkRfP
+      0RdvxLKsxQ+chokFSLKCqshYRpKO3/yI+KbPsrVURbIsTNPAMEwsJBRVRZYWPx5Y1uKHVdOS
+      kBUFRZaunbsv/h4oqrw45/bKB1sTGUVRkCWJm53mf9DXoMe7RvjbHxy4hS/W/7+vfv4+7qoJ
+      L/UybilJkqTsOQJIMsoNq13cUBVFRlGu/x3DHCKW9zG2l175NkiSkBUVWXnvY4AkKag3+w1A
+      kmTe2YalxcDe575C9smeAD4k1dnEjh1LvQrhdpeFfxEmCB8dEYBgayIAwdZEAIKtiQAEWxMB
+      CLYmAhBsTQQg2JoIQLA1EYBgayIAwdZEAIKtiQAEWxMBCLYmAhBsTQQg2JoIQLA1EYBgayIA
+      wdZEAIKtiQAEWxMBCLYmAhBsTQQg2JoIQLA1EYBgayIAwdZEAIKtZcfFcVOzDI9NEkto126S
+      VSfB4mpKAwqp+AwTkSkWMgr+cCklIS/qewdXmBni0UkiU7NoeMgvLaPA70DGQkvGiIyOE9dV
+      /HlhwvkBXIqENjfG4OgshjNASXkZASdYWpxY0sDhzsHnEvuPbJcdASSnudjVzuVIHGBxFthE
+      lPo/+CJhdZZLZ49xumdicYB1bhP3PLCOyoD7XcNbTFIzw5xtO0Hv2Dy6JeEt38jD9y4jx0oy
+      dOYARy5MopkSzlAd6zevpa7IovfoQU6OxrFUNxVrd3HvMi9zkQF6J0xKG5r5oMGUQnbIjgBC
+      dezYWceOK/+pz19k7xsD3FXlZG6kh7Goi9adn6IxZ4Gzr73OmeEmypa7kK9OrjCTjA4OMafW
+      8MDTq8g3htn3y8N0R+tYqQ7T3WewaucfsiwnzrmDxxkZHqXYq9Edq+Thp1fjip1mX9tlFirL
+      mJhN4yuopiggZgTcCbLwGG4y2dlGqnYtZe40c1oGp7ec6kIvDk8hK1oLmZ9MYJrvGnyjx5kz
+      FHLDlRT5nbiCNWxqMhiY0MkkxlkIrqAp7MHhKaCxOgCWxkIawFocIGlZYGWYi0VJEaSkJJQl
+      ew7hd8m+9zE9QNulXNY+mYtkzpGRQXb78VzZ2TsDQZLRGJjl7/yMriMpCg6v98p0SYnckI/J
+      yDx40sihXJxXbvf63CQjOmm5ihUFb/P6z7+PrgaobtlMenYKFInTL/+QEauCjdvWUVvoR8FC
+      07TrlmmaJrquk8ncOGvrvfe9HaU1jWQyudTLuOWyLoCpM0dJ1j9IqQewJCQkMM13jfq1cLlc
+      XDe4S5Ku7MnNd+5lWXjcbpBleNcwa8uycDocKEqAivVbcFZEMRQ3HjnK+LQbMqNkCu5ihT5A
+      T3+EcMBL0CXdMAtM13UkSUKWbzzIZsPoVFW9cfTrnej2fyfeTRvgaG8eGx/PXTx3k1Scuklm
+      IcqcWUVIhvjICORUXh+AwwFahuTsHBpBnJgMD86QV+MEtwd9dJwFivFhEp2OI+PG6ZRRvYVU
+      1xeQTkzSeTxJyXIfEwMqhfWraHHC+AUdI2MiuVWU9wwpMwzjfYfk3SyK241ikxnHt/87cZVl
+      ETvXTqZ5NSXuqxubm4KQD0O7xNmeSeanL/DmkSQVVV4UBSzTQDdMLCVEaY7EzPh5esfmmB08
+      zO6eIu4qd+D21VJineBQ1zTzUxc51TOP4sol6Lk6J9ggdu4ws1WrKfI6MXSdeHSamdFx0rB4
+      BBGyVva8e9Y4Z/pDtFT7UJWre3cJb0k9K+oKGHj12/zdN14ltWor60uCKKbO2PGf8d1XuklJ
+      KuHGFpry4uz756/x9z/qpv7j91DjceDyF9KyZRVTr3+Dr33rZWby61m5vOLaZwor2ceJqXq2
+      1DiRc0qoLvIztu87fOfNBSoqiwh4s+clFG6UPXOCPyQjE+XkS6+ibv8Uawp+/xupmBN8+5Mk
+      SbqDd19zyJX30boEG7+QPe7YTzmKo4p165Z6FcLtTuweBVsTAQi2JgIQbE0EINiaCECwNRGA
+      YGsiAMHWRACCrYkABFsTAQi2JgIQbE0EINiaCECwNRGAYGsiAMHWRACCrYkABFsTAQi2JgIQ
+      bE0EINiaCECwNRGAYGsiAMHWRACCrYkABFsTAQi2JgIQbC2Lrg1qkJgeZWB4grgm4Q2VU1cf
+      xm0kmRodYmg8hn7lnsHKFdSHPVw3KdXUiE2MMDw2TUryUlxdR0nQiYxFOj7FUP8QsxkHuUXl
+      lBWF8KgS6Zl+evqnMFx5VNXXEnKBmZ5jJq7j9OUScIv9R7bLmgC06T5OHD/PxFwaS1LwzTop
+      rg/jTk5x8fxJOoYsQoHFp1OS20Rtoee6MamJqUHOnT7NUEwHM0P3SIaHH1pB0FxgoOMQbYNJ
+      ZMnCHJimdcNaGktNLhxr48KcAdJFJs0QD6zwE4sM0T8FZQ1BAu4lezmEj0iWBJBk+EwXU+4q
+      tm27iyKfQmZhcdCckUqiBEpY/8jdrCl7n5lWZoLRoVESrlrufbSFkDHG27/az4XpRlY5hugZ
+      UFn98B9Q70tw4dBRxsfGKPVp9CWruf/RVTjnOth/fIB4TRmTsyl8hXUU5ogxqXeC7DiGa1Nc
+      igdYXldFgc+JJCk4/R6cQDptISHj93/AQLfMAnFTJVhYQYHPgTNQwfomiaFJAz0xQTK0nPp8
+      Nw53iLrqAFg6CV0GLU3GtDAzaTRLZ34uSlrKp6w4mC17DuF3yI73UVtAM+fpeutFDsbmSUlu
+      qlY/xAObqtG1BIMd++k5chqvy0tBwwYe2tpMvtfBtTMgQ0dSZFSv59qY1EDQw+T4HHjTKMEg
+      jiu3ezwuEimNtFTL6rJeXvn+/0JzFXHXpq2kZiZAmefQ868zZFaz9f7NNBYHULBIp9PXLdmy
+      LHRdv+lIVE1L33Db7SadTpNIJJZ6GbdcdgRgWkiSl+LmBtaF/UhajMsd+3jzwjM8UtfEvU8W
+      siEDRmaesfajvNGex1Mby3FenSV2dUyq8c6YVNO08Pu8ICtYhn7tdsuycLucKEoOZevu5dG6
+      OIakIGtjjEx7kbRh1JptbDN6uTgwQUmun1y3hNPpvG7Jur74mO+dHgngUG//8aMOh2Nx3Owd
+      LjsC8IfIcc5QWFREWVkIxSrClRnk9f4J5OU15IbLyAXAoswzTcfBaSyjFK5ufA7nlTGpMdJW
+      ACcmg/3T5DU4wONFHx4jbhXjw2J6ah7JcuFySiieIGF3gHQiwrmjGpUtAcb6VQrKl9Hk0hg4
+      b2BmDCSPA+ndY1mvkGX5pgFIWTBZ8v3Wfqe5/d8JADnMsqI5TnVeYGBsmujkMJcujFNYm8do
+      30neeuMUAxMzzEyPcPrQOXylYSRFxtCSxJMZTDVERa5KNHKWc5fHGevez57+SloqnXj89VQ6
+      TrL/9BCRobOc6FnA5Ssg6L2yQZsa0x2HSTStI+xxY+k60bFBhi4OkZYlJPXO30juZNlxBECm
+      YNV2Nh/bzW9/+jZR00fjpid4tDGIslDBzPDbvPrD3cxkXJS17GBXayEOdEZOvMCrsQ18emcj
+      +fUrWB57izdffI49UgXbnvg45U4V1ZlP86Z17PntT3huLsCyLffR3FjK1W84rfQQ5xPL2V6u
+      AMVUlUTo3/NLXjDruX9XEQFPduxDhJu7g8ekTnPipX34dnyClXliTOqHJcakZjspiaf+Hu5a
+      go1fyB5Zcgr04SlqOatalnoVwu1O7B4FWxMBCLYmAhBsTQQg2JoIQLA1EYBgayIAwdZEAIKt
+      iQAEWxMBCLYmAhBsTQQg2JoIQLA1EYBgayIAwdZEAIKtiQAEWxMBCLYmAhBsTQQg2JoIQLA1
+      EYBgayIAwdZEAIKtiQAEWxMBCLYmAhBsTQQg2FoWXRxXZ26om46ufqJpiWDxctaur8Fv6cxH
+      +jl/vofJpIOiZa20VBXgUt8zscVIMtHfzfneIeJSLvWta2gIe1EwSUSH6GzvJJJyUVS3nGW1
+      peQ4JBZGOzjWMUTGW0rL+jWUeMFcmGRkVsMTLKbAL4ZjZLusOQKkRs/y9sk+4rKX3NwcnIZO
+      BtBiY3R3dTKadOJ3peg90kbvbALzuqkHJvOjfXR2X2ZB8eG1xjm+/wxTGQM9NUffyaP0J1z4
+      nCkGznVycXiGjDlBx9FLaC4/avISbecimFaaqUiEiYl5UG4ciSRknyw5AsTpPzMIxY1saG0g
+      zyVjpHVAYzoywVwqj9btG6l0awy89SInB+M0hrzvDMkz5xkZn8HyN7B543ICZpS2F3/D+YlW
+      1rsH6IsUsOHxeyh3p7h07BCDUxHmcjTGnfXct3kZykI3Bw8PE5uziM6n8JcuJyQmw9wRsuNd
+      TE/Rb+TRVF5CrktFkmRUtxMVjQUsnL4SSv1OFIefquYyMtEE1x0CtCQp2UGgoIRcl4Lqyael
+      0c34lIGRmEEvaqA8x7H48+VBJAlSkhtmJpnXTTLzE8xaEon5KGmlhMoCL+Lk586QHUcALYmp
+      TXD4V9/lp5FpEpKPxq1P84n7SzCwkJxunFd29orLQ2w6imlVvvPzpoEkS8gu15XiF+cBR0ai
+      SP40st93bX6ww6kSX0iStpaztbmLH/zDf2Ih5y4eemwFqekhZGeUX3/zn+g1m9j5iYdYVRFC
+      xSKVSl23ZMuysKwbbwduetvtJplMEo/Hl3oZt1x2BICErObT8vBWnqnOR9Wm6djzAq+0P86G
+      HAkyGXQLHBKYRobcvELkd48tlWUsC6xMBguQsNAzOgV5uViqAzOZuna7YZj4fX6cTg+Fax/n
+      S6sfwzJSRIfPMWjlwcwg5Q/+Wx4yTnBgcIKa/CB5Xgm3233dijOZDJIk3XRG2HvvezvyeDz4
+      fL6lXsYtlx2nQDmF5LtlFBlkWUF151JWV4kRXcBjgrYwzkTawDTSRHoGIeAF+V0BONw4Mhrx
+      qQniuomZiXO+J0Y4T0H2BZFGL1/7+ZHRWSxTx+WUkCQZWZbR5sfpHfRQV6WgOlS8wVyCxWFc
+      AKaJJEk3/AJuevvN5gnfrt5v/XfKL8iaI0CIhgp462InWnwSj5wicmmBqtYa8v1DuIc7aD/W
+      zrQ/TvdFL02P+FBkC20uwnjSR1lRkLJCPyPnuzl5KkmuPkJ7opEHSxy4jVpqcl/h8BEvtTkL
+      9A9blK4sInB1J63PM3yuC+fyneS6JhnBYKy3nQ5jCDOwCsWRHfsQ4eay5N2TyW1cz4YShf5z
+      bRxv78Oq2sHGKgeuvAqWNdXhmuri1Lkpwhs30pzvQzZ1Rk+9wVtdM+jI5FY20VwdYvZiOx0D
+      MmseXEuxU8XhCdK4fiPBmU5On58kWL+cpprCxb07YBkxop4VtBTJ4C2gsqIU92w33XP5NFaF
+      8buy5CUUburOnROsjXH4t+2U3vcx6gJiTvCHZZc5wVlyCvThSYpKWctmqpdg4xeyxx0bgKwU
+      Ulu71KsQbndi9yjYmghAsDURgGBrIgDB1kQAgq2JAARbEwEItiYCEGxNBCDYmghAsDURgGBr
+      IgDB1kQAgq39X0Od/tIEWHvpAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
